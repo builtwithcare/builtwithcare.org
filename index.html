@@ -33,15 +33,62 @@
 
 <div class="center">
     <img class="logo" src="img/minimal_logo.png">
+    </a>
 
     <div class="sub">
-        <p class="coming-soon"><strong>coming soon</strong></p>
-        
+        <nav class="nav" id="topnavbar">
+            <a href="./mission_statement.html">mission statement</a>
+            <br>
+            <a href="./img/flyer.pdf">flyer</a>
+            <br>
+            <a href="./event.html">the event</a>
+            <br>
+            <a href="./about.html">about</a>
+            <br>
+        </nav>
+
+
+
+        <p class="l">---</br></p>
+        <p class="coming-soon" id="clock"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 14, 2022 9:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("clock").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>        
         <a class="link" href="https://github.com/builtwithcare" target="_blank"><i class="fab fa-github"></i></a>
 
         <a class="link" href="https://twitter.com/builtwithcare" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div> 
+    </div>
+
 </div>
+
+
 
 </body>
 </html>
